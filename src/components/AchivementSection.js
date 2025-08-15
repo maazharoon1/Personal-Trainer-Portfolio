@@ -174,7 +174,7 @@ export default function AchievementSection({ items = defaultItems }) {
             }}
           />
           {/* overlay text still fine */}
-          <div className="absolute left-4 bottom-4 text-white">
+          <div className="absolute left-4 bottom-4 ">
             <h4 className="font-semibold text-lg">{items[hovered]?.title}</h4>
            <p className="text-sm text-muted-foreground mb-2">{items[hovered]?.description}</p>
             <p className="text-sm opacity-90">{items[hovered]?.year}</p>

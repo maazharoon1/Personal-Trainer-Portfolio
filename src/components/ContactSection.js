@@ -85,8 +85,8 @@ const ContactSection = ({IsPage}) => {
   ];
 
   return (
-    <section className="min-h-screen  max-w-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-tr from-background via-background to-accent/10">
-      <div className=" mx-auto max-w-11/12 pl-1">
+    <section className={`${IsPage ? "py-20 " : " py-4 min-w-[95vw]" } min-h-screen  max-w-screen  px-4 sm:px-6 lg:px-8 bg-gradient-to-tr from-background via-background to-accent/10`}>
+      <div className={`${IsPage ? "" : "mx-2 "} sm:mx-auto sm:max-w-11/12 pl-1`}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +244,7 @@ I’m ready to help you push past limits and become your best self.
               </p>
             </div>
 
-            <div className={`${!IsPage ? "py-3 flex items-center" : "space-y-4" }`}>
+            <div className={`${!IsPage ? "py-3 grid grid-cols-2 sm:grid-cols-3 items-center" : "space-y-4" }`}>
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}

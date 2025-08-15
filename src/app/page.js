@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
    
-     <div className="overflow-auto ">
+     <div className="overflow-hidden max-w-[98vw]">
          
           <Header />
 
-      <div className="mt-10 w-[99.5vw] h-screen ">
+      <div className="mt-10 w-[99vw] h-screen ">
 
           <HeroSection />
     <div className="h-2 bg-accent dark:bg-accent-foreground/20 -mb-4 ">
@@ -27,7 +27,7 @@ export default function Home() {
        <div className="h-2 bg-accent dark:bg-accent-foreground/20  ">
       <Separator />
     </div>
-    <div className="w-[80vw] mx-auto">
+    <div className="min-w-[80vw] max-w-[96vw] mx-auto">
         <ContactSection IsPage={false}/>
         </div>
        <div className="h-2 bg-accent dark:bg-accent-foreground/20  ">
