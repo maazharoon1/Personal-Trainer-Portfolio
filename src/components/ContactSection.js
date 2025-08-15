@@ -237,7 +237,7 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
             className="space-y-6"
           >
             <div>
-              <h3 className="text-2xl font-medium mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-medium mb-6"> Let&apos;s Connect </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
              Whether you’re aiming to lose weight, build muscle, or improve your endurance,
 I’m ready to help you push past limits and become your best self.
