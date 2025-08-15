@@ -11,7 +11,6 @@ theme: {
     },
   },
   plugins: ["@tailwindcss/postcss"
-    ,"@tailwindcss/typography"
     
   ],
 };
