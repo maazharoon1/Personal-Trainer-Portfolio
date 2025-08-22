@@ -11,7 +11,7 @@ import Top from './Top'
 
 const HeaderLink = [
     { id: 'home', label: 'Home', href: '/' },
-    { id: 'AiCoach', label: 'AiCoach', href: '/aicoach' },
+    { id: 'fitnessai', label: 'Fitness AI', href: '/FitnessAi' },
     {    id: 'about' ,label : 'About', href: '/about' },
     {    id: 'experience' ,label : 'Experience', href: '/experience' },
     {    id: 'contact' ,label : 'Contact', href: '/contact' }

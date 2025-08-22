@@ -4,18 +4,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-/**
- * AchievementSection
- * - Hover a row (desktop) to see the image preview on the right.
- * - Tap a row (mobile) to toggle its preview beneath the item.
- * - Keyboard accessible (focus shows preview).
- *
- * Usage:
- * <AchievementSection />
- *
- * You can also pass your own array:
- * <AchievementSection items={myArray} />
- */
 
 
 const defaultItems = [

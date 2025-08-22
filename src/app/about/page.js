@@ -6,9 +6,11 @@ import { Separator } from "@/components/ui/separator";
 import HeroSection from "@/components/ui/HeroSection";
 import Header from "@/components/ui/Header";
 
+import SocialIcon from "@/components/ui/SocialIcon";
+
 export default function About() {
   return (
-    <div className="overflow-auto ">
+    <div className="overflow-x-hidden ">
             <Header />
 
       <div className=" min-h-[99vh] w-[99.6vw] ">
@@ -39,6 +41,12 @@ export default function About() {
        <div >
         <Footer />
         </div>
+        {/* social links */}
+         <div className="fixed z-50 bottom-[40%] right-[3%]  ">
+        
+              <SocialIcon/>
+        
+               </div>
     </div>
 
   );

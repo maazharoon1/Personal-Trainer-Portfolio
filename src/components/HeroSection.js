@@ -1,12 +1,10 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { easeIn, motion } from "framer-motion";
-import { Facebook, Instagram } from "lucide-react";
-import Link from "next/link";
 import React from "react";
+import SocialIcon from "./ui/SocialIcon";
+import Link from "next/link";
 
 
 const HeroSection = () => {
@@ -53,7 +51,7 @@ const HeroSection = () => {
               whileHover={{ scale: 1.07 }}
               transition={{ duration: 0.23, ease: easeIn }}
               className={cn(
-                "px-6 py-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+                "px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
               )}
             >
               Start Training
@@ -61,21 +59,10 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
+      {/* social links */}
       <div className="fixed z-50 bottom-[40%] right-[1%]  ">
 
-        <div className="bg-accent/10 flex items-center py-3 rounded-full px-1 gap-3 flex-col "> 
-
-           <Link href={"https://www.instagram.com/coach.ham_za18"} target="blank">
-           <Instagram className="w-6 h-6"/>
-           </Link>
-           <Link href={"https://www.facebook.com/hamza.haroon.7927"} target="blank">
-    <Facebook className="w-7 h-7"/>
-    </Link>
-    <Link href={"https://wa.me/923342473211"}>
-      <FontAwesomeIcon icon={faWhatsapp} style={{width:"22px", height:"22px"}}/>
-      </Link>
-      </div>
-
+       <SocialIcon/>
        </div>
     </motion.div>
   );

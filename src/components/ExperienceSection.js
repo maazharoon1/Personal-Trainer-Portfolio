@@ -75,10 +75,10 @@ export default function ExperienceSection() {
                 {/* Image on hover */}
                 <div className="hidden sm:block w-1/3">
                  {/* Image container - fixed size */}
-<div className="hidden sm:flex w-[300px] h-[300px] items-center justify-center">
+<div className="hidden sm:flex w-[250px] h-[250px] md:w-[300px] md:h-[300px] items-center justify-center">
 {/* Image container with fixed size */}
 
-<div className="hidden sm:flex w-[300px] h-[300px] items-center justify-center relative">
+<div className="hidden sm:flex  w-[250px] h-[250px] md:w-[300px] md:h-[300px] items-center justify-center relative">
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: hovered === index ? 1 : 0 }}

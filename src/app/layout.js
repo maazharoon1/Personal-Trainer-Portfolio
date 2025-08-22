@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+     suppressHydrationWarning
     >
+      
       <body className=" antialiased">
         <ThemeProvider
           attribute="class"
@@ -22,7 +24,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <MotionWrapper>
-            {children}
+                     {children}
             <Toaster
               position="bottom-right"
               toastOptions={{

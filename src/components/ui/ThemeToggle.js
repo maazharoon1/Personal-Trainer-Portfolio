@@ -4,13 +4,23 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "./button"
 import { motion } from "framer-motion"
+import { useState ,useEffect} from "react"
 export function ModeToggle() {
   
 const isDarkMode = useTheme().resolvedTheme === "dark"
   const { theme,setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const toggle = () =>{
     setTheme(theme === "dark" ? "light" : "dark")
   }
+  useEffect(() => {
+  setMounted(true);
+  }, [])
+  
+    if (!mounted) {
+    return null;
+  }
+
   return (
     <>
 

@@ -6,7 +6,7 @@ import Header from "@/components/ui/Header";
 import HomeAboutSection from "@/components/HAboutSection";
 import ContactSection from "@/components/ContactSection";
 export default function Home() {
-  
+  const page = 'home'
   return (
     <>
    
@@ -28,7 +28,7 @@ export default function Home() {
       <Separator />
     </div>
     <div className="min-w-[80vw] max-w-[96vw] mx-auto">
-        <ContactSection IsPage={false}/>
+        <ContactSection Page={page}/>
         </div>
        <div className="h-2 bg-accent dark:bg-accent-foreground/20  ">
       <Separator />

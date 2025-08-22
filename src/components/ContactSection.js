@@ -11,7 +11,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import React from 'react'
 import { toast } from 'sonner';
 
-const ContactSection = ({IsPage}) => {
+const ContactSection = ({Page}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -85,8 +85,8 @@ const ContactSection = ({IsPage}) => {
   ];
 
   return (
-    <section className={`${IsPage ? "py-20 " : " py-4 min-w-[95vw]" } min-h-screen  max-w-screen  px-4 sm:px-6 lg:px-8 bg-gradient-to-tr from-background via-background to-accent/10`}>
-      <div className={`${IsPage ? "" : "mx-2 "} sm:mx-auto sm:max-w-11/12 pl-1`}>
+    <section className={`${Page == "contact" ? "py-20 " : " py-4 min-w-[95vw]" } min-h-screen  max-w-screen  px-4 sm:px-6 lg:px-8 bg-gradient-to-tr from-background via-background to-accent/10`}>
+      <div className={`${Page == "contact" ? "" : "mx-2 "} sm:mx-auto sm:max-w-11/12 pl-1`}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,10 +94,10 @@ const ContactSection = ({IsPage}) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-medium mb-6 from-0% to-75% bg-gradient-to-r from-gray-900 via-gray-500 to-gray-300  bg-clip-text text-transparent">
+          <h2 className={`${Page == "contact" ? "bg-gradient-to-r from-gray-900 via-gray-500 to-gray-300 bg-clip-text text-transparent " : " mt-10 " } text-4xl sm:text-5xl font-medium mb-6 from-0% to-75% `}>
          Get In Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className={`${Page == "contact" ? " text-muted-foreground " : " "} text-lg  max-w-3xl mx-auto leading-relaxed`}>
           Looking to transform your body, boost your strength, or start your fitness journey?
 I’m here to guide you every step of the way — let’s achieve your goals together!
           </p>
@@ -128,6 +128,7 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
                       value={formData.name}
                       onChange={handleInputChange}
                       required
+                      placeholder="Enter your name"
                       className="mt-2 focus:ring-2 focus:ring-purple-500/20 border-border/50 focus:border-purple-500/50"
                     />
                   </motion.div>
@@ -144,7 +145,8 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+                     required
+                     placeholder="Enter your email"
                       className="mt-2 focus:ring-2 focus:ring-purple-500/20 border-border/50 focus:border-purple-500/50"
                     />
                   </motion.div>
@@ -163,6 +165,7 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
+                    placeholder="Type your subject here..."
                     className="mt-2 focus:ring-2 focus:ring-purple-500/20 border-border/50 focus:border-purple-500/50"
                   />
                 </motion.div>
@@ -180,6 +183,7 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
                     value={formData.message}
                     onChange={handleInputChange}
                     required
+                    placeholder="Type your message here..."
                     rows={5}
                     className="mt-2 focus:ring-2 focus:ring-purple-500/20 border-border/50 focus:border-purple-500/50 resize-none"
                   />
@@ -194,7 +198,7 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
                   <Button
                     type="submit"
                     disabled={isSubmitting || isSubmitted}
-                    className="w-full bg-gradient-to-r from-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-600 text-white border-0 relative overflow-hidden"
+                    className={`${Page == "contact" ? "from-gray-800 to-gray-500 hover:from-gray-900 hover:to-gray-600 " : 'from-blue-600 to-purple-600 hover:to-purple-700'} w-full bg-gradient-to-r  text-white border-0 relative overflow-hidden`}
                   >
                     <motion.div
                       className="flex items-center justify-center gap-2"
@@ -238,13 +242,13 @@ I’m here to guide you every step of the way — let’s achieve your goals tog
           >
             <div>
               <h3 className="text-2xl font-medium mb-6"> Let&apos;s Connect </h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className={`${Page == "contact" ? " text-muted-foreground " : " "} leading-relaxed mb-8`}>
              Whether you’re aiming to lose weight, build muscle, or improve your endurance,
 I’m ready to help you push past limits and become your best self.
               </p>
             </div>
 
-            <div className={`${!IsPage ? "py-3 grid grid-cols-2 sm:grid-cols-3 items-center" : "space-y-4" }`}>
+            <div className={`${Page ==  "home"  ? "py-3 grid grid-cols-2 sm:grid-cols-3 items-center" : "space-y-4" }`}>
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -258,20 +262,19 @@ I’m ready to help you push past limits and become your best self.
                 >
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-12 h-12 bg-gradient-to-r from-gray-800 to-gray-500 group-hover:from-gray-900 group-hover:to-gray-600 rounded-lg flex items-center justify-center 0 transition-all"
-                  >
+                    className={` ${Page == "contact" ? " from-gray-800 to-gray-500 group-hover:from-gray-900 group-hover:to-gray-600 " : " from-blue-500 to-purple-500 group-hover:to-purple-600"} w-12 h-12 bg-gradient-to-r rounded-lg flex items-center justify-center 0 transition-all`}                  >
                     <info.icon className="w-5 h-5 text-white" />
                   </motion.div>
                   <div>
                     <h4 className="font-medium">{info.title}</h4>
-                    {IsPage && <p className="text-muted-foreground">{info.value}</p>}
+                    {Page == "contact" && <p className="text-muted-foreground">{info.value}</p>}
                   </div>
                 </motion.a>
               ))}
             </div>
 
             {/* Availability Status */}
-       {IsPage &&
+       {Page == "contact" &&
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -38,7 +38,7 @@ export default function AboutPage() {
         <h2 className="text-3xl md:text-4xl font-semibold mb-6">
           My Fitness Journey
         </h2>
-        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-10">
+        <p className="text-lg leading-relaxed mb-10">
           I started my fitness journey over a decade ago, driven by a passion to
           improve not only my body but also my mindset and lifestyle. Over the
           years, I have honed my expertise in{" "}
@@ -82,10 +82,10 @@ export default function AboutPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="md:mt-18 mt-12 text-center">
+        <div className="md:mt-15 mt-12 text-center">
           <a
             href="/contact"
-            className="px-6 py-3 text-lg  font-medium text-white bg-white/10 rounded-lg hover:bg-white/15 transition"
+            className="px-6 py-3 text-lg text-accent-foreground  font-medium  dark:bg-white/10 rounded-lg bg-black/10 hover:bg-black/15 dark:hover:bg-white/15 transition"
           >
             Let’s Work Together
           </a>

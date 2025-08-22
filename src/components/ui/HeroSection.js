@@ -38,8 +38,8 @@ const HeroSection = () => {
       whileInView={{opacity:0.9 }}
       transition={{duration :2 }}
       className="md:max-w-[80%] lg:max-w-[70%]">
-        <div className="flex flex-col gap-5 md:gap-10 sm:gap-7 mx-2 px-2 py-10 text-gray-700 dark:text-gray-300">
-          <h1 className="sm:text-2xl md:text-3xl lg:text-[40px] text-xl font-semibold text-foreground">
+        <div className="flex flex-col gap-5 md:gap-10 sm:gap-7 mx-2 px-2 py-10 ">
+          <h1 className="sm:text-2xl md:text-3xl lg:text-[40px] text-xl font-semibold ">
            About Me
           </h1>
 
@@ -57,20 +57,25 @@ const HeroSection = () => {
           </p>
 
           {/* CTA */}
-          <p className="gap-1 text-sm md:text-[14px] lg:text-lg flex flex-col md:flex-row md:items-center md:gap-[10px]">
+         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+          <p className="text-sm sm:text-lg ">
             Your transformation starts today.
-            <Link href="/contact">
-              <motion.button
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.07 }}
-                transition={{ duration: 0.23, ease: easeIn }}
-                className={cn("bg-transparent hover:bg-transparent font-medium cursor-pointer p-0 m-0")}
-              >
-                Start Training
-              </motion.button>
-            </Link>
           </p>
+          <Link href="/contact">
+            <motion.button
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.07 }}
+              transition={{ duration: 0.23, ease: easeIn }}
+              className={cn(
+                "px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+              )}
+            >
+              Start Training
+            </motion.button>
+          </Link>
         </div>
+        </div>
+        
       </motion.div>
     </motion.div>
   );
