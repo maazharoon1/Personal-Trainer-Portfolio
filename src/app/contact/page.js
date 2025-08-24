@@ -3,7 +3,7 @@ import Footer from '@/components/ui/Footer'
 import Header from '@/components/ui/Header'
 import React from 'react'
 import SocialIcon from '@/components/ui/SocialIcon';
-const page = () => {
+const Page = () => {
   const page = 'contact'
   return (
     <>
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 
 
-const page = () => {
+const Page = () => {
   const [chat, setChat] = useState([]);
   const convoEnd = useRef(null)
 
@@ -114,4 +114,4 @@ return (
   )
 }
 
-export default page
+export default Page

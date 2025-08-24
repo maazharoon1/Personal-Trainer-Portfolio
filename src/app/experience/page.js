@@ -4,7 +4,7 @@ import Header from '@/components/ui/Header'
 import SocialIcon from '@/components/ui/SocialIcon'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
   <> 
             <Header />
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

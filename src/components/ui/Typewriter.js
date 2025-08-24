@@ -111,12 +111,7 @@ const TypeWriterUi = ({ children, speed = 30 }) => {
               {...props}
             />
           ),
-          img: ({ node, ...props }) => (
-            <img
-              className="max-w-full h-auto rounded-lg shadow-md my-4"
-              {...props}
-            />
-          ),
+        
         }}
       >
         {children}
