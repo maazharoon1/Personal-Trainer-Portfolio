@@ -41,11 +41,11 @@ return (
     <small className="ml-1 text-sm  font-normal">
       (Report bugs  
       <Link 
-        href="https://maazportfolio-2025.vercel.app/contact" 
+        href="https://maazportfolio-2025.vercel.app/" 
         className="underline hover:text-green-700 transition-colors"
         aria-label="Report bugs on Maaz Portfolio site"
       >
-        {" "} here
+        {" "} here 
       </Link>)
     </small>
   </span>
