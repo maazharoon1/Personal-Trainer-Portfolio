@@ -10,7 +10,7 @@ theme: {
      
     },
   },
-  plugins: ["@tailwindcss/postcss",  require('@tailwindcss/typography'),
+  plugins: ["@tailwindcss/postcss",
 
   ],
   
