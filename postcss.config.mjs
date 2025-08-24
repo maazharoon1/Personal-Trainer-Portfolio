@@ -10,9 +10,10 @@ theme: {
      
     },
   },
-  plugins: ["@tailwindcss/postcss"
-    
+  plugins: ["@tailwindcss/postcss",  require('@tailwindcss/typography'),
+
   ],
+  
 };
 
 export default config;

@@ -133,7 +133,7 @@ const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false)
           className={`relative z-10 ${
             isActive
               ? 'text-foreground'
-              : 'text-muted-foreground hover:text-foreground'
+              : 'dark:text-gray-700 text-muted-foreground hover:text-foreground'
           }`}
         >
           {item.label}

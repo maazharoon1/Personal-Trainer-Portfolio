@@ -1,0 +1,15 @@
+/* TypeWriterUi.css */
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1.5rem; /* Adjust the size as needed */
+  animation: blink 1s step-end infinite;
+  display: inline-block; /* Keeps it in line with the text */
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
